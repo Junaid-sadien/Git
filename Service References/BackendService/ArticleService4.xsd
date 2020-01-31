@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" />
+  <xs:element name="GetArticles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q1:GetArticlesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetArticlesResult" nillable="true" type="q2:ArticlesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestArticles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q3:LatestArticleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestArticlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetLatestArticlesResult" nillable="true" type="q4:ArticlesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestCategoryArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q5:LatestCategoryArticle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestCategoryArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetLatestCategoryArticleResult" nillable="true" type="q6:ArticlesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllArticles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" minOccurs="0" name="request" nillable="true" type="q7:BaseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllArticlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetAllArticlesResult" nillable="true" type="q8:ArticlesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q9:GetArticleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetArticleResult" nillable="true" type="q10:ArticleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" minOccurs="0" name="request" nillable="true" type="q11:BaseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetCategoriesResult" nillable="true" type="q12:CategoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoArticleAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q13:ArticleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoArticleActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" minOccurs="0" name="DoArticleActionResult" nillable="true" type="q14:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q15:AddCommentRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" minOccurs="0" name="AddCommentResult" nillable="true" type="q16:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopArticles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q17:TopArticlesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopArticlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetTopArticlesResult" nillable="true" type="q18:TopArticlesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRandomArticles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q19:RandomArticlesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRandomArticlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetRandomArticlesResult" nillable="true" type="q20:ArticlesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommentsForArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q21:GetCommentsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommentsForArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="GetCommentsForArticleResult" nillable="true" type="q22:CommentsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoCommentsAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="request" nillable="true" type="q23:DoCommentsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoCommentsActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" minOccurs="0" name="DoCommentsActionResult" nillable="true" type="q24:DoCommentsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

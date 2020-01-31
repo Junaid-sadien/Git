@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Product" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Product" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/ProductService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/ProductService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/ProductService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Products" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/ProductService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ProductsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberToReturn" type="xs:int" />
+          <xs:element minOccurs="0" name="Page" type="xs:int" />
+          <xs:element minOccurs="0" name="SearchString" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductsRequest" nillable="true" type="tns:ProductsRequest" />
+  <xs:complexType name="ProductsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Products" nillable="true" type="q3:ArrayOfProduct" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductsResponse" nillable="true" type="tns:ProductsResponse" />
+  <xs:complexType name="ProductRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q4:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductRequest" nillable="true" type="tns:ProductRequest" />
+  <xs:complexType name="ProductResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q5:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Product" nillable="true" type="q6:Product" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductResponse" nillable="true" type="tns:ProductResponse" />
+  <xs:complexType name="ProductCategoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q7:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductCatagoryId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductCategoryRequest" nillable="true" type="tns:ProductCategoryRequest" />
+  <xs:complexType name="ProductCategoryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q8:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Categories" nillable="true" type="q9:ArrayOfProductCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductCategoryResponse" nillable="true" type="tns:ProductCategoryResponse" />
+  <xs:complexType name="AllProductCategoriesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q10:BaseUserRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AllProductCategoriesRequest" nillable="true" type="tns:AllProductCategoriesRequest" />
+  <xs:complexType name="AllProductCategoriesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q11:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Products" minOccurs="0" name="Categories" nillable="true" type="q12:ArrayOfProductCategoryTreeItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AllProductCategoriesResponse" nillable="true" type="tns:AllProductCategoriesResponse" />
+  <xs:complexType name="ProductPriceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q13:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductPriceRequest" nillable="true" type="tns:ProductPriceRequest" />
+  <xs:complexType name="ProductPriceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q14:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductPriceResponse" nillable="true" type="tns:ProductPriceResponse" />
+  <xs:complexType name="ProductPricesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q15:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductPricesRequest" nillable="true" type="tns:ProductPricesRequest" />
+  <xs:complexType name="ProductPricesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q16:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Prices" nillable="true" type="q17:ArrayOfProductPrice" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductPricesResponse" nillable="true" type="tns:ProductPricesResponse" />
+  <xs:complexType name="AddProductCategoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q18:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductCategoryRequest" nillable="true" type="tns:AddProductCategoryRequest" />
+  <xs:complexType name="AddProductCategoryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q19:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductCategoryResponse" nillable="true" type="tns:AddProductCategoryResponse" />
+  <xs:complexType name="AddProductRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q20:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Product" nillable="true" type="q21:Product" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductRequest" nillable="true" type="tns:AddProductRequest" />
+  <xs:complexType name="AddProductResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q22:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductResponse" nillable="true" type="tns:AddProductResponse" />
+  <xs:complexType name="DeleteProductCategoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q23:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductCatagoryId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteProductCategoryRequest" nillable="true" type="tns:DeleteProductCategoryRequest" />
+  <xs:complexType name="DeleteProductCategoryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q24:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductCatagoryId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteProductCategoryResponse" nillable="true" type="tns:DeleteProductCategoryResponse" />
+  <xs:complexType name="UpdateProductPictureRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q25:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateProductPictureRequest" nillable="true" type="tns:UpdateProductPictureRequest" />
+  <xs:complexType name="UpdateProductPictureResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q26:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateProductPictureResponse" nillable="true" type="tns:UpdateProductPictureResponse" />
+  <xs:complexType name="AddProductPictureRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q27:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Picture" nillable="true" type="q28:ProductPicture" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductPictureRequest" nillable="true" type="tns:AddProductPictureRequest" />
+  <xs:complexType name="AddProductPictureResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q29:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductPictureResponse" nillable="true" type="tns:AddProductPictureResponse" />
+  <xs:complexType name="UpdateProductRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q30:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Product" nillable="true" type="q31:Product" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateProductRequest" nillable="true" type="tns:UpdateProductRequest" />
+  <xs:complexType name="UpdateProductResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q32:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateProductResponse" nillable="true" type="tns:UpdateProductResponse" />
+  <xs:complexType name="DeleteProductPictureRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q33:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductPictureId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteProductPictureRequest" nillable="true" type="tns:DeleteProductPictureRequest" />
+  <xs:complexType name="DeleteProductPictureResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q34:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteProductPictureResponse" nillable="true" type="tns:DeleteProductPictureResponse" />
+  <xs:complexType name="DeleteProductPriceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q35:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductPriceId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteProductPriceRequest" nillable="true" type="tns:DeleteProductPriceRequest" />
+  <xs:complexType name="DeleteProductPriceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q36:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteProductPriceResponse" nillable="true" type="tns:DeleteProductPriceResponse" />
+  <xs:complexType name="UpdateProductPriceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q37:BaseRequest">
+        <xs:sequence>
+          <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Price" nillable="true" type="q38:ProductPrice" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateProductPriceRequest" nillable="true" type="tns:UpdateProductPriceRequest" />
+  <xs:complexType name="UpdateProductPriceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q39:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateProductPriceResponse" nillable="true" type="tns:UpdateProductPriceResponse" />
+  <xs:complexType name="AddProductPriceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q40:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Price" nillable="true" type="q41:ProductPrice" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductPriceRequest" nillable="true" type="tns:AddProductPriceRequest" />
+  <xs:complexType name="AddProductPriceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q42:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddProductPriceResponse" nillable="true" type="tns:AddProductPriceResponse" />
+  <xs:complexType name="ProductsPricesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q43:BaseRequest">
+        <xs:sequence>
+          <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProductIds" nillable="true" type="q44:ArrayOfint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductsPricesRequest" nillable="true" type="tns:ProductsPricesRequest" />
+  <xs:complexType name="ProductsPricesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q45:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Products" minOccurs="0" name="Prices" nillable="true" type="q46:ArrayOfProductProductPrice" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductsPricesResponse" nillable="true" type="tns:ProductsPricesResponse" />
+</xs:schema>

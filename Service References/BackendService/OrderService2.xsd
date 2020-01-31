@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/OrderService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" />
+  <xs:element name="GetDeliveryMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q1:DeliveryMethodsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveryMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="GetDeliveryMethodsResult" nillable="true" type="q2:DeliveryMethodsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeliveryMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q3:UpdateDeliveryMethodRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeliveryMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="UpdateDeliveryMethodResult" nillable="true" type="q4:UpdateDeliveryMethodResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDeliveryMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q5:AddDeliveryMethodRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDeliveryMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="AddDeliveryMethodResult" nillable="true" type="q6:AddDeliveryMethodResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlaceOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q7:PlaceOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlaceOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="PlaceOrderResult" nillable="true" type="q8:PlaceOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q9:GetOrdersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="GetMyOrdersResult" nillable="true" type="q10:GetOrdersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q11:GetOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="GetOrderResult" nillable="true" type="q12:GetOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q13:GetOrdersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="GetOrdersResult" nillable="true" type="q14:GetOrdersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillingAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q15:GetAddressRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillingAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="GetBillingAddressResult" nillable="true" type="q16:GetAddressResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="request" nillable="true" type="q17:UpdateOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Order" minOccurs="0" name="UpdateOrderResult" nillable="true" type="q18:UpdateOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

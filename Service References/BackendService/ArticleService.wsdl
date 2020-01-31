@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ArticleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Articles" />
+      <xsd:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" />
+      <xsd:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" />
+      <xsd:import schemaLocation="http://waws.getadoc.co.za/Service/ArticleService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IArticleService_GetArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetLatestArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetLatestArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetLatestCategoryArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestCategoryArticle" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetLatestCategoryArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestCategoryArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetAllArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetAllArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticle" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_DoArticleAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoArticleAction" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_DoArticleAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoArticleActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_AddComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_AddComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetTopArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetTopArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetRandomArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetRandomArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetCommentsForArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForArticle" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetCommentsForArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_DoCommentsAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoCommentsAction" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_DoCommentsAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoCommentsActionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IArticleService">
+    <wsdl:operation name="GetArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetArticles" message="tns:IArticleService_GetArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetArticlesResponse" message="tns:IArticleService_GetArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetLatestArticles" message="tns:IArticleService_GetLatestArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetLatestArticlesResponse" message="tns:IArticleService_GetLatestArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestCategoryArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetLatestCategoryArticle" message="tns:IArticleService_GetLatestCategoryArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetLatestCategoryArticleResponse" message="tns:IArticleService_GetLatestCategoryArticle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetAllArticles" message="tns:IArticleService_GetAllArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetAllArticlesResponse" message="tns:IArticleService_GetAllArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetArticle" message="tns:IArticleService_GetArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetArticleResponse" message="tns:IArticleService_GetArticle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetCategories" message="tns:IArticleService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetCategoriesResponse" message="tns:IArticleService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoArticleAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/DoArticleAction" message="tns:IArticleService_DoArticleAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/DoArticleActionResponse" message="tns:IArticleService_DoArticleAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/AddComment" message="tns:IArticleService_AddComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/AddCommentResponse" message="tns:IArticleService_AddComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetTopArticles" message="tns:IArticleService_GetTopArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetTopArticlesResponse" message="tns:IArticleService_GetTopArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetRandomArticles" message="tns:IArticleService_GetRandomArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetRandomArticlesResponse" message="tns:IArticleService_GetRandomArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsForArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetCommentsForArticle" message="tns:IArticleService_GetCommentsForArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetCommentsForArticleResponse" message="tns:IArticleService_GetCommentsForArticle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoCommentsAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/DoCommentsAction" message="tns:IArticleService_DoCommentsAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/DoCommentsActionResponse" message="tns:IArticleService_DoCommentsAction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IArticleService" type="tns:IArticleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetLatestArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestCategoryArticle">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetLatestCategoryArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetAllArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticle">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoArticleAction">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/DoArticleAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetTopArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetRandomArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsForArticle">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetCommentsForArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoCommentsAction">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/DoCommentsAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ArticleService">
+    <wsdl:port name="BasicHttpBinding_IArticleService" binding="tns:BasicHttpBinding_IArticleService">
+      <soap:address location="http://waws.getadoc.co.za/Service/ArticleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

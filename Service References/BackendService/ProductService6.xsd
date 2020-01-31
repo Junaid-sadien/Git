@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Products" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Products" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProductCategoryTreeItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductCategoryTreeItem" nillable="true" type="tns:ProductCategoryTreeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductCategoryTreeItem" nillable="true" type="tns:ArrayOfProductCategoryTreeItem" />
+  <xs:complexType name="ProductCategoryTreeItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategories" nillable="true" type="tns:ArrayOfProductCategoryTreeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductCategoryTreeItem" nillable="true" type="tns:ProductCategoryTreeItem" />
+  <xs:complexType name="ArrayOfProductProductPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductProductPrice" nillable="true" type="tns:ProductProductPrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductProductPrice" nillable="true" type="tns:ArrayOfProductProductPrice" />
+  <xs:complexType name="ProductProductPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductProductPrice" nillable="true" type="tns:ProductProductPrice" />
+</xs:schema>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Customers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Customers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/CustomerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/CustomerService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Customers" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/CustomerService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" />
+  <xs:complexType name="AddWebsiteCustomerRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddWebsiteCustomerRequest" nillable="true" type="tns:AddWebsiteCustomerRequest" />
+  <xs:complexType name="AddWebsiteCustomerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.Customers" minOccurs="0" name="CreateResult" type="q3:CreateResult" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddWebsiteCustomerResponse" nillable="true" type="tns:AddWebsiteCustomerResponse" />
+  <xs:complexType name="CustomerAddressRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q4:BaseUserRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerAddressRequest" nillable="true" type="tns:CustomerAddressRequest" />
+  <xs:complexType name="CustomerAddressResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q5:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Addresses" nillable="true" type="q6:ArrayOfAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerAddressResponse" nillable="true" type="tns:CustomerAddressResponse" />
+  <xs:complexType name="AddCustomerAddressRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q7:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Address" nillable="true" type="q8:Address" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddCustomerAddressRequest" nillable="true" type="tns:AddCustomerAddressRequest" />
+  <xs:complexType name="AddCustomerAddressResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q9:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddCustomerAddressResponse" nillable="true" type="tns:AddCustomerAddressResponse" />
+  <xs:complexType name="GetCustomerRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q10:BaseUserRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomerRequest" nillable="true" type="tns:GetCustomerRequest" />
+  <xs:complexType name="GetCustomerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q11:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Customer" nillable="true" type="q12:Customer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomerResponse" nillable="true" type="tns:GetCustomerResponse" />
+  <xs:complexType name="UpdateCustomerRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q13:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Customer" nillable="true" type="q14:Customer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateCustomerRequest" nillable="true" type="tns:UpdateCustomerRequest" />
+  <xs:complexType name="UpdateCustomerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q15:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Customer" nillable="true" type="q16:Customer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateCustomerResponse" nillable="true" type="tns:UpdateCustomerResponse" />
+  <xs:complexType name="UpdateAddressRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q17:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="Address" nillable="true" type="q18:Address" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateAddressRequest" nillable="true" type="tns:UpdateAddressRequest" />
+  <xs:complexType name="UpdateAddressResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q19:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateAddressResponse" nillable="true" type="tns:UpdateAddressResponse" />
+</xs:schema>

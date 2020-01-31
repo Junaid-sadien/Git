@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Security" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService.Security" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/SecurityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" />
+  <xs:import schemaLocation="http://waws.getadoc.co.za/Service/SecurityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" />
+  <xs:complexType name="LoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginRequest" nillable="true" type="tns:LoginRequest" />
+  <xs:complexType name="LoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="User" nillable="true" type="q3:User" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="WebsiteSettings" nillable="true" type="q4:ArrayOfWebsiteSetting" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginResponse" nillable="true" type="tns:LoginResponse" />
+  <xs:complexType name="ChangePasswordRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q5:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldPassword" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangePasswordRequest" nillable="true" type="tns:ChangePasswordRequest" />
+  <xs:complexType name="ChangePasswordResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q6:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangePasswordResponse" nillable="true" type="tns:ChangePasswordResponse" />
+  <xs:complexType name="AddUserToWebsiteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q7:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="User" nillable="true" type="q8:User" />
+          <xs:element minOccurs="0" name="WebsiteIdToAssign" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddUserToWebsiteRequest" nillable="true" type="tns:AddUserToWebsiteRequest" />
+  <xs:complexType name="AddUserToWebsiteResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q9:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddUserToWebsiteResponse" nillable="true" type="tns:AddUserToWebsiteResponse" />
+  <xs:complexType name="UpdateUserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q10:BaseUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="User" nillable="true" type="q11:User" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUserRequest" nillable="true" type="tns:UpdateUserRequest" />
+  <xs:complexType name="UpdateUserResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q12:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUserResponse" nillable="true" type="tns:UpdateUserResponse" />
+  <xs:complexType name="AddWebsiteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q13:BaseUserRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContactNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DomianName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WebAppManagement.Models" minOccurs="0" name="WebsiteSetting" nillable="true" type="q14:WebsiteSetting" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddWebsiteRequest" nillable="true" type="tns:AddWebsiteRequest" />
+  <xs:complexType name="AddWebsiteResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q15:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddWebsiteResponse" nillable="true" type="tns:AddWebsiteResponse" />
+  <xs:complexType name="ForgottenPasswordRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q16:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgottenPasswordRequest" nillable="true" type="tns:ForgottenPasswordRequest" />
+  <xs:complexType name="ForgottenPasswordResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q17:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgottenPasswordResponse" nillable="true" type="tns:ForgottenPasswordResponse" />
+  <xs:complexType name="ForgottenPasswordTokenRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q18:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgottenPasswordTokenRequest" nillable="true" type="tns:ForgottenPasswordTokenRequest" />
+  <xs:complexType name="ForgottenPasswordTokenResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/WebAppManagement.Models.WebService" base="q19:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgottenPasswordTokenResponse" nillable="true" type="tns:ForgottenPasswordTokenResponse" />
+</xs:schema>

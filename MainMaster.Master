@@ -1,0 +1,291 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="Ratan_and_Singh_2020.MainMaster" %>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>
+        <asp:ContentPlaceHolder runat="server" ID="title"></asp:ContentPlaceHolder> | Drs Ratan &amp; Singh
+    </title>
+
+    <meta name="author" content="Drs Ratan &amp; Singh">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,300italic,400,400italic,700,700italic,900,900italic'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/global.css'>
+    <link href="css/structure.css" rel="stylesheet" />
+    <link href="css/design2.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
+    <asp:ContentPlaceHolder runat="server" ID="head"></asp:ContentPlaceHolder>
+</head>
+
+<body class="home layout-full-width nice-scroll-on mobile-tb-left button-flat no-content-padding header-classic minimalist-header sticky-header sticky-white ab-hide subheader-both-center menu-arrow-bottom menuo-right footer-copy-center">
+    <!-- Main Theme Wrapper -->
+    <div id="Wrapper">
+        <!-- Header Wrapper -->
+        <div id="Header_wrapper" class="bg-parallax" data-enllax-ratio="0.3">
+            <!-- Header -->
+            <header id="Header">
+
+                <!-- Header -  Logo and Menu area -->
+                <div id="Top_bar">
+                    <div class="container">
+                        <div class="column one">
+                            <div class="top_bar_left clearfix">
+                                <!-- Logo-->
+                                <div class="logo">
+                                    <a id="logo" href="/">
+                                        <img class="logo-main scale-with-grid" src="images/logo/ratan-singh-loho.png" />
+                                        <img class="logo-sticky scale-with-grid" src="images/logo/ratan-singh-loho.png">
+                                        <img class="logo-mobile scale-with-grid" src="images/logo/ratan-singh-loho.png">
+                                    </a>
+                                </div>
+                                <!-- Main menu-->
+                                <div class="menu_wrapper">
+                                    <nav id="menu" class="menu-main-menu-container">
+                                        <ul id="menu-main-menu" class="menu">
+                                            <li><a href="#"><span>About</span></a></li>
+                                            <li><a href="#"><span>Aesthetic Dentistry</span></a></li>
+                                            <li><a href="#"><span>General Dentistry</span></a></li>
+                                            <li><a href="#"><span>Dental Concerns</span></a></li>
+                                            <li><a href="#"><span>Patient Experience</span></a></li>
+                                            <li><a href="#"><span>Contact Us</span></a></li>
+                                        </ul>
+                                    </nav>
+                                    <a class="responsive-menu-toggle" href="#"><i class="icon-menu"></i></a>
+                                </div>
+                                <!-- Secondary menu area - only for certain pages -->
+                                <div class="secondary_menu_wrapper"></div>
+                                <!-- Banner area - only for certain pages-->
+                                <div class="banner_wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <asp:ContentPlaceHolder runat="server" ID="body"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer id="Footer" class="clearfix">
+            <div class="widgets_wrapper" style="padding: 60px 0 30px;">
+                <div class="container">
+                    <!-- One Fourth (1/4) Column -->
+                    <div class="column one-fourth">
+                        <!-- Text Area -->
+                        <aside class="widget widget_text">
+                            <div class="textwidget">
+                                <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
+                                    <div class="image_wrapper">
+                                        <img class="scale-with-grid" src="images/logo/ratan-singh-loho.png" alt="" />
+                                    </div>
+                                </div>
+                                <hr class="no_line" />
+                                <br />
+                                <h6>Address:</h6>
+                                <div class="textwidget">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-house"></i>15 On Orange Hotel, <br />Corner Orange Street & Grey's Pass, Gardens,<br /> Cape Town, 8001</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- One Fourth (1/4) Column -->
+                    <div class="column one-fourth">
+                        <!-- Text Area -->
+                        <aside class="widget widget_text">
+                            <div class="textwidget">
+                                <p style="padding-top:15px">
+                                    Ratan and Singh is a private dental practice based at the 15 On Orange Hotel. The classy hotel environment provides an unparalleled dental experience with exceptional concierge services that will take care of all your appointment and transportation needs.
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- One Fourth (1/4) Column -->
+                    <div class="column one-fourth">
+                        <!-- Text Area -->
+                        <aside class="widget widget_text">
+                            <h4>Dental Services</h4>
+                            <div class="textwidget">
+                                <ul style="border-left: 1px solid #a7afb8; padding-left: 20px; line-height: 35px;">
+                                    <li>
+                                        <a href="#">
+                                            Aesthetic Dentistry
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            General Dentistry
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Patient Experience
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Dental Concerns
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- One Fourth (1/4) Column -->
+                    <div class="column one-fourth">
+                        <!-- Text Area -->
+                        <aside class="widget widget_text">
+                            <h4>Call:</h4>
+                            <div class="textwidget">
+                                <ul style="border-left: 1px solid #a7afb8; padding-left: 20px; line-height: 35px;">
+                                    <li><a href="#"><i class="fa fa-phone"></i> 083 777 0915</a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i> 079 074 0400</a></li>
+                                </ul>
+                            </div>
+                            <br />
+                            <h4>Email:</h4>
+                            <div class="textwidget">
+                                <ul style="border-left: 1px solid #a7afb8; padding-left: 20px; line-height: 35px;">
+                                    <li><a href="#"><i class="fa fa-envelope"></i> info@ratansingh.co.za</a></li>
+                                </ul>
+                            </div>
+                            
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer copyright-->
+            <div class="footer_copy">
+                <div class="container">
+                    <div class="column one">
+
+                        <div class="copyright">
+                            &copy; <%:DateTime.Now.Year %> Drs Ratan &amp; Singh. All Rights Reserved.</a>
+                        </div>
+                        <!--Social info area-->
+                        <ul class="social"></ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script>
+        var tpj = jQuery;
+        var revapi1;
+        tpj(document).ready(function () {
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 3000,
+                    navigation: {
+                        onHoverStop: "off",
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 586,
+                    gridheight: 586,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner0",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        });
+        /*]]>*/
+    </script>
+
+    <script>
+        jQuery(window).load(function () {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img.logo-main");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "images/retina-design2.png").width(retinaLogoW).height(retinaLogoH);
+                var stickyEl = jQuery("#logo img.logo-sticky");
+                var stickyLogoW = stickyEl.width();
+                var stickyLogoH = stickyEl.height();
+                stickyEl.attr("src", "images/retina-design2.png").width(stickyLogoW).height(stickyLogoH);
+                var mobileEl = jQuery("#logo img.logo-mobile");
+                var mobileLogoW = mobileEl.width();
+                var mobileLogoH = mobileEl.height();
+                mobileEl.attr("src", "images/retina-design2.png").width(mobileLogoW).height(mobileLogoH);
+            }
+        });
+    </script>
+    <asp:ContentPlaceHolder runat="server" ID="scripts"></asp:ContentPlaceHolder>
+</body>
+
+</html>
